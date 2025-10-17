@@ -45,7 +45,7 @@ header {
 .social-links {
     display: flex;
     gap: 1.5rem;
-    margin-right: 3em;
+    margin-right: 1em;
 }
 .social-link, .nav-link {
     color: #bfa07a;
@@ -53,6 +53,7 @@ header {
     transition: all 0.3s ease;
     font-weight: 500;
     font-size: 1.5rem;
+    margin-right: -0.5em;
 }
 .social-link:hover, .nav-link:hover {
     color: #8b6f4d;
@@ -345,4 +346,21 @@ footer {
         font-size: 1em;
         margin-bottom: 0.2em;
     }
-} 
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 1.5rem;
+    gap: 1.2rem;
+  }
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+  .main-nav {
+    justify-content: center;
+    width: 100%;
+  }
+}

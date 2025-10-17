@@ -1,0 +1,233 @@
+{
+  "categories": [
+    {
+      "name": "Refreshers",
+      "items": [
+        {
+          "id": "refreshers-lychee-berry",
+          "name": "Lychee Berry",
+          "description": "Juicy but also sweet drink that refreshes the mind.",
+          "image": "images/food & drinks/lyche.jpg",
+          "alt": "lychee berry",
+          "pricing": [
+            { "variant": "ICED", "price": 120 }
+          ]
+        },
+        {
+          "id": "refreshers-peach-mango",
+          "name": "Peach Mango",
+          "description": "A mango-peach drink that is superb to the tastebuds.",
+          "image": "images/food & drinks/peach.jpg",
+          "alt": "peach mango",
+          "pricing": [
+            { "variant": "ICED", "price": 120 }
+          ]
+        },
+        {
+          "id": "refreshers-cucumber-calico",
+          "name": "Cucumber Calico",
+          "description": "A cucumber type of drink that is as cold as ice.",
+          "image": "images/food & drinks/cucumber.jpg",
+          "alt": "cucumber calico",
+          "pricing": [
+            { "variant": "ICED", "price": 120 },
+            { "variant": "PITCHER", "price": 250 }
+          ]
+        },
+        {
+          "id": "refreshers-iced-tea",
+          "name": "Iced Tea",
+          "description": "A sweetly brewed iced tea that is sweet to the touch.",
+          "image": "images/food & drinks/tea.jpg",
+          "alt": "iced tea",
+          "pricing": [
+            { "variant": "ICED", "price": 99 },
+            { "variant": "PITCHER", "price": 230 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Milkshake (NON COFFEE w/ whip)",
+      "items": [
+        {
+          "id": "milkshake-cookies-and-cream",
+          "name": "Cookies & Cream",
+          "description": "A milkshake fit for those who has a sweet tooth",
+          "image": "images/food & drinks/cookies.jpg",
+          "alt": "cookies & cream",
+          "pricing": [
+            { "variant": "BLENDED", "price": 170 }
+          ]
+        },
+        {
+          "id": "milkshake-strawberry",
+          "name": "Strawberry",
+          "description": "A juicy milkshake made out of strawberry that are freshly harvested",
+          "image": "images/food & drinks/strawberry.jpg",
+          "alt": "strawberry",
+          "pricing": [
+            { "variant": "BLENDED", "price": 170 }
+          ]
+        },
+        {
+          "id": "milkshake-chocolate",
+          "name": "Chocolate",
+          "description": "Sweet chocolate drink",
+          "image": "images/food & drinks/chocolate.jpg",
+          "alt": "chocolate",
+          "pricing": [
+            { "variant": "BLENDED", "price": 160 }
+          ]
+        },
+        {
+          "id": "milkshake-vanilla",
+          "name": "Vanilla",
+          "description": "Sweet vanilla drink",
+          "image": "images/food & drinks/vanilla.jpg",
+          "alt": "vanilla",
+          "pricing": [
+            { "variant": "BLENDED", "price": 160 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Signatures",
+      "items": [
+        {
+          "id": "signatures-caramel-meowcchiato",
+          "name": "Caramel Meowcchiato",
+          "description": "Rich, bold, and aromatic shot of pure caramel.",
+          "image": "images/food & drinks/caramel.jpg",
+          "alt": "caramel meowcchiato",
+          "pricing": [
+            { "variant": "ICED", "price": 180 },
+            { "variant": "HOT", "price": 170 }
+          ]
+        },
+        {
+          "id": "signatures-white-cat-breve",
+          "name": "White Cat Breve",
+          "description": "White signature drink",
+          "image": "images/food & drinks/coffee.jpg",
+          "alt": "white cat breve",
+          "pricing": [
+            { "variant": "ICED", "price": 180 }
+          ]
+        },
+        {
+          "id": "signatures-spanish-latte",
+          "name": "Spanish Latte",
+          "description": "Creamy spanish latte",
+          "image": "images/food & drinks/spanish.jpg",
+          "alt": "spanish latte",
+          "pricing": [
+            { "variant": "ICED", "price": 130 },
+            { "variant": "HOT", "price": 170 }
+          ]
+        },
+        {
+          "id": "signatures-horchata",
+          "name": "Horchata",
+          "description": "A drink that is so delicious you'll forget your problems",
+          "image": "images/food & drinks/horchata.jpg",
+          "alt": "horchata",
+          "pricing": [
+            { "variant": "ICED", "price": 190 }
+          ]
+        },
+        {
+          "id": "signatures-sea-salt-foam",
+          "name": "Sea Salt Foam",
+          "description": "A sweet coffee with a salty after taste",
+          "image": "images/food & drinks/sea.jpg",
+          "alt": "sea salt foam",
+          "pricing": [
+            { "variant": "ICED", "price": 190 }
+          ]
+        },
+        {
+          "id": "signatures-biscoff",
+          "name": "Biscoff",
+          "description": "Famous in other countries brought here",
+          "image": "images/food & drinks/biscoff.jpg",
+          "alt": "biscoff",
+          "pricing": [
+            { "variant": "ICED", "price": 190 }
+          ]
+        }
+      ],
+      "notes": [
+        { "text": "Add whip cream", "price": 40 },
+        { "text": "Substitute for oat/almond/soy milk", "note": "ask barista what is available", "price": 20 },
+        { "text": "Add shot of espresso", "price": 50 }
+      ]
+    },
+    {
+      "name": "Non-coffee",
+      "subcategories": [
+        {
+          "name": "Fruit Shakes",
+          "items": [
+            { "id": "noncoffee-fruit-banana", "name": "Banana", "price": 130 },
+            { "id": "noncoffee-fruit-yellow-mango", "name": "Yellow Mango", "price": 160 },
+            { "id": "noncoffee-fruit-green-mango", "name": "Green Mango", "price": 160 }
+          ]
+        },
+        {
+          "name": "In can",
+          "items": [
+            { "id": "noncoffee-can-coke-regular", "name": "Coke Regular", "price": 80 },
+            { "id": "noncoffee-can-coke-zero", "name": "Coke Zero", "price": 80 },
+            { "id": "noncoffee-can-sprite", "name": "Sprite", "price": 80 },
+            { "id": "noncoffee-can-royal", "name": "Royal", "price": 80 },
+            { "id": "noncoffee-can-bottle-water", "name": "Bottle Water", "price": 50 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pastries",
+      "items": [
+        {
+          "id": "pastries-croissant",
+          "name": "Croissant",
+          "description": "Flaky, buttery pastry baked fresh daily.",
+          "image": "images/food & drinks/croissant.jpg",
+          "alt": "Croissant",
+          "pricing": [ { "variant": "", "price": 80 } ]
+        },
+        {
+          "id": "pastries-chocolate-cake",
+          "name": "Chocolate Cake",
+          "description": "Moist chocolate cake with rich ganache.",
+          "image": "images/food & drinks/cake.jpg",
+          "alt": "Chocolate Cake",
+          "pricing": [ { "variant": "", "price": 110 } ]
+        }
+      ]
+    },
+    {
+      "name": "Specialties",
+      "items": [
+        {
+          "id": "specialties-purrfect-sundae",
+          "name": "Purrfect Sundae",
+          "description": "Vanilla ice cream, chocolate drizzle, and a cat-shaped cookie.",
+          "image": "images/food & drinks/sundae.jpg",
+          "alt": "sundae",
+          "pricing": [ { "variant": "", "price": 150 } ]
+        },
+        {
+          "id": "specialties-meowcha-frappe",
+          "name": "Meowcha Frappe",
+          "description": "Blended coffee, milk, and a hint of caramel, topped with whipped cream.",
+          "image": "images/food & drinks/frappe.jpg",
+          "alt": "frappe",
+          "pricing": [ { "variant": "", "price": 160 } ]
+        }
+      ]
+    }
+  ]
+}

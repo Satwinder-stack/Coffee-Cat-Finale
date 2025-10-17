@@ -1,0 +1,2 @@
+# Disable auto_prepend_file for API requests
+php_value auto_prepend_file none

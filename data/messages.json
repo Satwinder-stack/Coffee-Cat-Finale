@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "meowmeow",
+        "contact": "09205614310",
+        "email": "srjeerh@gmail.com",
+        "message": "rawrawrarw",
+        "platform": "email",
+        "date": "2025-10-09"
+    },
+    {
+        "id": 2,
+        "name": "sadas",
+        "contact": "34123123",
+        "email": "g@gmail.com",
+        "message": "dfasdas",
+        "platform": "email",
+        "date": "2025-10-09"
+    }
+]

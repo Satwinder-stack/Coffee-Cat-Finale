@@ -1,0 +1,14 @@
+# Ensure PHP handles .html files so our auth guard can protect them
+AddType application/x-httpd-php .php .html
+
+# Auto prepend the authentication guard on every request
+# This assumes Apache with PHP module or CGI honoring php_value
+# If using FCGI where php_value is not allowed, configure auto_prepend_file in php.ini or vhost
+php_value auto_prepend_file auth.php
+
+# Basic security headers (optional)
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+</IfModule>

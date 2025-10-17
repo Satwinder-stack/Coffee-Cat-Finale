@@ -58,7 +58,7 @@ header {
     display: flex;
     margin-top: -1em;
     gap: 1rem;
-    margin-right: 3em;
+    margin-right: 1em;
 }
   
 .social-links a{
@@ -87,6 +87,7 @@ header {
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 20px;
+    margin-right: -0.5em;
   }
   
   .nav-link:hover {
@@ -353,6 +354,64 @@ footer p {
     font-weight: 500;
 }
 
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-container select {
+  width: 100%;
+  padding: 0.9em 1em;
+  font-size: 1.05rem;
+  font-family: "Poppins", sans-serif;
+  color: #4e3c2a;
+  background-color: #f8f4f0;
+  border: 2px solid #d8c7b1;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.dropdown-container::after {
+  content: "▾";
+  position: absolute;
+  top: 50%;
+  right: 1.1em;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #a98c6d;
+  pointer-events: none;
+}
+
+.dropdown-container select:hover {
+  background-color: #fffaf6;
+  border-color: #a98c6d;
+  box-shadow: 0 0 5px rgba(169, 140, 109, 0.4);
+}
+
+.dropdown-container select:focus {
+  border-color: #b47a3b;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(180, 122, 59, 0.4);
+  transform: scale(1.01);
+}
+
+.dropdown-container select option {
+  background-color: #fff;
+  color: #4e3c2a;
+  padding: 10px;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
     .cat-modal-content {
         padding: 1.2rem 0.5rem 1.5rem 0.5rem;
@@ -489,6 +548,9 @@ footer p {
     .cat-gallery img {
         height: 150px;
     }
+    .dropdown-container select {
+    font-size: 1rem;
+  }
 }
 
 
@@ -709,22 +771,46 @@ footer p {
 
 @media (min-width: 600px) and (max-width: 1024px) {
   header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 1.5rem 1.5rem;
-    gap: 0;
+    gap: 1.2rem;
+  }
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+  .main-nav {
+    justify-content: center;
+    width: 100%;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5rem 1.5rem;
+    gap: 1.2rem;
   }
   .logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
   }
-  .hamburger {
-    display: none;
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
   }
   .logo-img {
-    height: 2.8em;
+    height: 5em;
     width: 4.5em;
   }
   .logo-name {
@@ -742,7 +828,7 @@ footer p {
     box-shadow: none;
     padding: 0;
     width: auto;
-    margin-top: 0.1em;
+    margin-top: -1.5em;
   }
   .nav-link {
     font-size: 1.15rem;

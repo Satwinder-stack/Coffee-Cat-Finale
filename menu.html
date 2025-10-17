@@ -5,27 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Coffee Cat Café</title>
     <link rel="stylesheet" href="css/menu.css">
+    <style>
+      .menu-search {
+        max-width: 900px;
+        margin: 0 auto 1.2em auto;
+        display: flex;
+        align-items: center;
+        gap: 0.6em;
+        padding: 0 0.8em;
+      }
+      .menu-search .search-wrap {
+        position: relative;
+        flex: 1;
+      }
+      .menu-search input[type="search"] {
+        width: 100%;
+        padding: 0.85em 2.8em 0.85em 2.6em;
+        border: 1px solid rgba(133, 97, 61, 0.3);
+        border-radius: 999px;
+        background: #fffdf9;
+        box-shadow: 0 2px 10px rgba(160,120,80,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+        font-size: 1rem;
+        color: #3b2a1a;
+        outline: none;
+      }
+      .menu-search input[type="search"]::placeholder {
+        color: #9c8166;
+      }
+      .menu-search .search-icon {
+        position: absolute;
+        left: 0.9em;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.1em;
+        color: #9c8166;
+        pointer-events: none;
+      }
+      .menu-search .clear-btn {
+        border: none;
+        background: #8d6b4d;
+        color: white;
+        padding: 0.7em 1.1em;
+        border-radius: 14px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(141,107,77,0.25);
+        transition: transform .06s ease-in-out, box-shadow .15s ease-in-out;
+      }
+      .menu-search .clear-btn:hover {
+        box-shadow: 0 6px 18px rgba(141,107,77,0.3);
+      }
+      .menu-search .clear-btn:active {
+        transform: translateY(1px);
+      }
+      .menu-section .no-results {
+        text-align: center;
+        color: #7b624c;
+        background: #fff6ef;
+        border: 1px dashed #e4cdb8;
+        padding: 1em 1.2em;
+        border-radius: 12px;
+        margin: 1em auto;
+        max-width: 900px;
+      }
+      .category-block[hidden] { display: none !important; }
+      .menu-items .menu-item[hidden] { display: none !important; }
+      .menu-items .menu-item ul li[hidden] { display: none !important; }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="images/logo.png" class="logo-img"></a>
-            <a href="index.html"><img src="images/logo name.png" class="logo-name"></a>
-            <button class="hamburger" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <img src="images/cats/pawprint.png" class="header-paw-print">
-        <div class="social-links" id="mobile-nav">
-            <a href="features.html" class="nav-link active">Features</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="contact.php" class="nav-link">Contact</a>
-            <a href="location.html" class="nav-link">Location</a>
-            <a href="cart.html" class="nav-link">Cart</a>
-        </div>
-    </header>
+<header>
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" class="logo-img"></a>
+        <a href="index.html"><img src="images/logo name.png" class="logo-name"></a>
+        <button class="hamburger" aria-label="Open navigation" aria-controls="mobile-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <img src="images/cats/pawprint.png" class="header-paw-print" id="paw">
+      <div class="social-links" id="mobile-nav">
+              <a href="features.html" class="nav-link">Features</a>
+              <a href="about.html" class="nav-link">About</a>
+              <a href="contact.php" class="nav-link">Contact</a>
+              <a href="location.html" class="nav-link">Location</a>
+              <a href="menu.html" class="nav-link">Menu</a>
+              <a href="cart.html" class="nav-link">Cart</a>
+      </div>
+  </header>
     <nav class="breadcrumb">
         <a href="index.html">Home</a> / <span>Menu</span>
     </nav>
@@ -36,201 +103,221 @@
         </section>
         <section class="menu-section">
             <img src="images/cats/pawprint.png" alt="Paw Print" class="menu-paw-print">
-            <h2 class="menu-category">Refreshers</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/lyche.jpg" alt="lychee berry" class="menu-img">
-                    <h3>Lychee Berry</h3>
-                    <p>Juicy but also sweet drink that refreshes the mind.</p>
-                    <div class="menu-price">ICED: ₱120</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/peach.jpg" alt="peach mango" class="menu-img">
-                    <h3>Peach Mango</h3>
-                    <p>A mango-peach drink that is superb to the tastebuds.</p>
-                    <div class="menu-price">ICED: ₱120</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/cucumber.jpg" alt="cucumber calico" class="menu-img">
-                    <h3>Cucumber Calico</h3>
-                    <p>A cucumber type of drink that is as cold as ice.</p>
-                    <div class="menu-price">ICED: ₱120 | PITCHER: ₱250</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/tea.jpg" alt="iced tea" class="menu-img">
-                    <h3>Iced Tea</h3>
-                    <p>A sweetly brewed iced tea that is sweet to the touch.</p>
-                    <div class="menu-price">ICED: ₱99 | PITCHER: ₱230</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
+            <div class="menu-search">
+              <div class="search-wrap">
+                <input type="search" id="menu-search-input" placeholder="Search menu (e.g., latte, mango, croissant)..." aria-label="Search menu">
+              </div>
+              <button class="clear-btn" id="menu-search-clear" type="button">Clear</button>
             </div>
-            <h2 class="menu-category">Milkshake (NON COFFEE w/ whip)</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/cookies.jpg" alt="cookies & cream" class="menu-img">
-                    <h3>Cookies & Cream</h3>
-                    <p>A milkshake fit for those who has a sweet tooth</p>
-                    <div class="menu-price">BLENDED: ₱170</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/strawberry.jpg" alt="strawberry" class="menu-img">
-                    <h3>Strawberry</h3>
-                    <p>A juicy milkshake made out of strawberry that are freshly harvested</p>
-                    <div class="menu-price">BLENDED: ₱170</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/chocolate.jpg" alt="chocolate" class="menu-img">
-                    <h3>Chocolate</h3>
-                    <p>Sweet chocolate drink</p>
-                    <div class="menu-price">BLENDED: ₱160</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/vanilla.jpg" alt="vanilla" class="menu-img">
-                    <h3>Vanilla</h3>
-                    <p>Sweet vanilla drink</p>
-                    <div class="menu-price">BLENDED: ₱160</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-            <h2 class="menu-category">Signatures</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/caramel.jpg" alt="caramel meowcchiato" class="menu-img">
-                    <h3>Caramel Meowcchiato</h3>
-                    <p>Rich, bold, and aromatic shot of pure caramel.</p>
-                    <div class="menu-price">ICED: ₱180 | HOT: ₱170</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/coffee.jpg" alt="white cat breve" class="menu-img">
-                    <h3>White Cat Breve</h3>
-                    <p>White signature drink</p>
-                    <div class="menu-price">ICED: ₱180</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print" style="margin-right: -0.5em;">🐾</span>
-                    <img src="images/food & drinks/spanish.jpg" alt="spanish latte" class="menu-img">
-                    <h3>Spanish Latte</h3>
-                    <p>Creamy spanish latte</p>
-                    <div class="menu-price">ICED: ₱130 | HOT: ₱170</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/horchata.jpg" alt="horchata" class="menu-img">
-                    <h3>Horchata</h3>
-                    <p>A drink that is so delicious you'll forget your problems</p>
-                    <div class="menu-price">ICED: ₱190</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/sea.jpg" alt="sea salt foam" class="menu-img">
-                    <h3>Sea Salt Foam</h3>
-                    <p>A sweet coffee with a salty after taste</p>
-                    <div class="menu-price">ICED: ₱190</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/biscoff.jpg" alt="biscoff" class="menu-img">
-                    <h3>Biscoff</h3>
-                    <p>Famous in other countries brought here</p>
-                    <div class="menu-price">ICED: ₱190</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item menu-item-note">
-                    <span class="item-paw-print">🐾</span>
-                    <ul>
-                        <li>Add whip cream <span class="menu-price">₱40</span></li>
-                        <li>Substitute for oat/almond/soy milk <span class="menu-note">* ask barista what is available</span> <span class="menu-price">₱20</span></li>
-                        <li>Add shot of espresso <span class="menu-price">₱50</span></li>
-                    </ul>
-                </div>
-            </div>
-            <h2 class="menu-category">Non-coffee</h2>
-            <div class="menu-items">
-                <div class="menu-item" id="left">
-                    <span class="item-paw-print">🐾</span>
-                    <h3>Fruit Shakes</h3>
-                    <ul>
-                        <li>Banana <span class="menu-price">₱130</span></li>
-                        <li>Yellow Mango <span class="menu-price">₱160</span></li>
-                        <li>Green Mango <span class="menu-price">₱160</span></li>
-                    </ul>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <h3>In can</h3>
-                    <ul>
-                        <li>Coke Regular <span class="menu-price">₱80</span></li>
-                        <li>Coke Zero <span class="menu-price">₱80</span></li>
-                        <li>Sprite <span class="menu-price">₱80</span></li>
-                        <li>Royal <span class="menu-price">₱80</span></li>
-                        <li>Bottle Water <span class="menu-price">₱50</span></li>
-                    </ul>
-                </div>
-            </div>
-            <h2 class="menu-category">Pastries</h2>
-            <div class="menu-items">
-                <div class="menu-item" id="left" >
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/croissant.jpg" alt="Croissant" class="menu-img">
-                    <h3>Croissant</h3>
-                    <p>Flaky, buttery pastry baked fresh daily.</p>
-                    <div class="menu-price">₱80</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/cake.jpg" alt="Chocolate Cake" class="menu-img">
-                    <h3>Chocolate Cake</h3>
-                    <p>Moist chocolate cake with rich ganache.</p>
-                    <div class="menu-price">₱110</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
-            <h2 class="menu-category">Specialties</h2>
-            <div class="menu-items">
-                <div class="menu-item" id="left">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/sundae.jpg" alt="sundae" class="menu-img">
-                    <h3>Purrfect Sundae</h3>
-                    <p>Vanilla ice cream, chocolate drizzle, and a cat-shaped cookie.</p>
-                    <div class="menu-price">₱150</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-                <div class="menu-item">
-                    <span class="item-paw-print">🐾</span>
-                    <img src="images/food & drinks/frappe.jpg" alt="frappe" class="menu-img">
-                    <h3>Meowcha Frappe</h3>
-                    <p>Blended coffee, milk, and a hint of caramel, topped with whipped cream.</p>
-                    <div class="menu-price">₱160</div>
-                    <button class="add-to-cart-btn">Add to Cart</button>
-                </div>
-            </div>
+            <div id="menu-root"></div>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Coffee Cat. All rights reserved. Created by Satwinder Jeerh of WD-303.</p>
     </footer>
     <script src="js/menu.js"></script>
+    <script>
+    async function loadMenuFromJSON() {
+      const root = document.getElementById('menu-root');
+      if (!root) return;
+      try {
+        const res = await fetch('./data/products.json?cb=' + Date.now(), { cache: 'no-store' });
+        const data = await res.json();
+        const categories = data.categories || [];
+
+        categories.forEach(cat => {
+          const catBlock = document.createElement('div');
+          catBlock.className = 'category-block';
+
+          const h2 = document.createElement('h2');
+          h2.className = 'menu-category';
+          h2.textContent = cat.name;
+          catBlock.appendChild(h2);
+          root.appendChild(catBlock);
+
+          if (cat.subcategories && cat.subcategories.length) {
+            const itemsWrap = document.createElement('div');
+            itemsWrap.className = 'menu-items';
+            cat.subcategories.forEach(sub => {
+              const itemDiv = document.createElement('div');
+              itemDiv.className = 'menu-item';
+
+              const paw = document.createElement('span');
+              paw.className = 'item-paw-print';
+              paw.textContent = '🐾';
+              itemDiv.appendChild(paw);
+
+              const h3 = document.createElement('h3');
+              h3.textContent = sub.name;
+              itemDiv.appendChild(h3);
+
+              const ul = document.createElement('ul');
+              sub.items.forEach(si => {
+                const li = document.createElement('li');
+                li.textContent = si.name + ' ';
+                const sp = document.createElement('span');
+                sp.className = 'menu-price';
+                sp.textContent = '₱' + si.price;
+                li.appendChild(sp);
+                ul.appendChild(li);
+              });
+              itemDiv.appendChild(ul);
+              itemsWrap.appendChild(itemDiv);
+            });
+            catBlock.appendChild(itemsWrap);
+          } else if (cat.items && cat.items.length) {
+            const itemsWrap = document.createElement('div');
+            itemsWrap.className = 'menu-items';
+            cat.items.forEach(item => {
+              const card = document.createElement('div');
+              card.className = 'menu-item';
+
+              const paw = document.createElement('span');
+              paw.className = 'item-paw-print';
+              paw.textContent = '🐾';
+              card.appendChild(paw);
+
+              if (item.image) {
+                const img = document.createElement('img');
+                img.className = 'menu-img';
+                img.src = item.image;
+                img.alt = item.alt || item.name;
+                card.appendChild(img);
+              }
+
+              const h3 = document.createElement('h3');
+              h3.textContent = item.name;
+              card.appendChild(h3);
+
+              if (item.description) {
+                const p = document.createElement('p');
+                p.textContent = item.description;
+                card.appendChild(p);
+              }
+
+              const priceDiv = document.createElement('div');
+              priceDiv.className = 'menu-price';
+              const priceText = (item.pricing || []).map(p => p.variant ? `${p.variant}: ₱${p.price}` : `₱${p.price}`).join(' | ');
+              priceDiv.textContent = priceText;
+              card.appendChild(priceDiv);
+
+              const btn = document.createElement('button');
+              btn.className = 'add-to-cart-btn';
+              btn.textContent = 'Add to Cart';
+              card.appendChild(btn);
+
+              itemsWrap.appendChild(card);
+            });
+
+            if (cat.notes && cat.notes.length) {
+              const noteDiv = document.createElement('div');
+              noteDiv.className = 'menu-item menu-item-note';
+              const pawNote = document.createElement('span');
+              pawNote.className = 'item-paw-print';
+              pawNote.textContent = '🐾';
+              noteDiv.appendChild(pawNote);
+
+              const ul = document.createElement('ul');
+              cat.notes.forEach(n => {
+                const li = document.createElement('li');
+                li.innerHTML = `${n.text} ${n.note ? '<span class="menu-note">* ' + n.note + '</span> ' : ''}<span class="menu-price">₱${n.price}</span>`;
+                ul.appendChild(li);
+              });
+              noteDiv.appendChild(ul);
+              itemsWrap.appendChild(noteDiv);
+            }
+
+            catBlock.appendChild(itemsWrap);
+          }
+        });
+      } catch (e) {
+        console.error('Failed to load menu', e);
+        const root2 = document.getElementById('menu-root');
+        if (root2) {
+          root2.innerHTML = '<div class="menu-items"><div class="menu-item" style="opacity:0.9">Unable to load menu. Please refresh the page or open via your local server (e.g., http://localhost/... ).</div></div>';
+        }
+      }
+    }
+    function applyFilter(query) {
+      const q = (query || '').trim().toLowerCase();
+      const blocks = document.querySelectorAll('.category-block');
+      let anyVisible = false;
+      blocks.forEach(block => {
+        let blockVisible = false;
+        const items = block.querySelectorAll('.menu-items .menu-item');
+        items.forEach(item => {
+          const isNote = item.classList.contains('menu-item-note');
+          const hasUL = !!item.querySelector('ul');
+          if (!q) {
+            item.hidden = false;
+            if (hasUL) {
+              item.querySelectorAll('ul li').forEach(li => li.hidden = false);
+            }
+          } else {
+            if (isNote) {
+              item.hidden = true;
+              return;
+            }
+            if (hasUL) {
+              let anyLi = false;
+              item.querySelectorAll('ul li').forEach(li => {
+                const text = li.textContent.toLowerCase();
+                const match = text.includes(q);
+                li.hidden = !match;
+                if (match) anyLi = true;
+              });
+              item.hidden = !anyLi;
+            } else {
+              const name = (item.querySelector('h3')?.textContent || '').toLowerCase();
+              const desc = (item.querySelector('p')?.textContent || '').toLowerCase();
+              const match = name.includes(q) || desc.includes(q);
+              item.hidden = !match;
+            }
+          }
+          if (!item.hidden) blockVisible = true;
+        });
+        block.hidden = !blockVisible;
+        if (blockVisible) anyVisible = true;
+      });
+      const root = document.getElementById('menu-root');
+      let noRes = document.getElementById('menu-no-results');
+      if (!noRes) {
+        noRes = document.createElement('div');
+        noRes.id = 'menu-no-results';
+        noRes.className = 'no-results';
+        noRes.textContent = 'No items match your search.';
+        root.appendChild(noRes);
+      }
+      noRes.style.display = anyVisible ? 'none' : 'block';
+    }
+    function initSearch() {
+      const input = document.getElementById('menu-search-input');
+      const clear = document.getElementById('menu-search-clear');
+      if (!input) return;
+      input.addEventListener('input', () => applyFilter(input.value));
+      if (clear) {
+        clear.addEventListener('click', () => {
+          input.value = '';
+          input.focus();
+          applyFilter('');
+        });
+      }
+      applyFilter('');
+    }
+    (function(){
+      const run = async () => {
+        await loadMenuFromJSON();
+        if (typeof setupAddToCartButtons === 'function') {
+          setupAddToCartButtons();
+        }
+        initSearch();
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+    </script>
 </body>
 </html>
