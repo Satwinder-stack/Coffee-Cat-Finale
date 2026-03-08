@@ -2,6 +2,8 @@
 **Satwinder Jeerh**  
 **Role:** Developer
 
+---
+
 ## Purpose
 This project creates a **digital home for Coffee Cat Cafe**, a hidden café where cats are the main attraction. The platform aims to introduce and expand the café’s presence online, making it easier for visitors and feline enthusiasts to discover the café and its unique atmosphere.
 
